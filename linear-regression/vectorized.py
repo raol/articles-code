@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def costFunction(theta, x, y):
-    return (sum((x.dot(theta) - y) ** 2) / (2 * x.size))[0]
+    return (sum((x.dot(theta) - y) ** 2) / (2 * x.shape[0]))[0]
 
 def gradientDescent(theta, x, y):
     m = y.size;
@@ -29,9 +29,8 @@ theta = theta.reshape((2, 1))
 
 costHistory, theta = gradientDescent(theta, X, Y)
 
-
 plt.xlabel("Iterations count")
-plt.ylabel("Theta value")
+plt.ylabel("J($\\theta$) value")
 plt.axis([0, 1500, min(costHistory), max(costHistory)])
 
 plt.plot(range(0, 1500), costHistory)
