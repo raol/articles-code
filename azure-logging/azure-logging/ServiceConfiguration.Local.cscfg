@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="azure_logging" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2014-06.2.4">
+  <Role name="SampleWorkerRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="log4net" value="&lt;log4net&gt;       &lt;appender name=&quot;TraceAppender&quot; type=&quot;log4net.Appender.TraceAppender&quot;&gt;        &lt;layout type=&quot;log4net.Layout.PatternLayout&quot;&gt;            &lt;conversionPattern value=&quot;%date [%thread] %-5level %logger [%property{NDC}] - %message%newline&quot; /&gt;        &lt;/layout&gt;    &lt;/appender&gt;    &lt;root&gt;        &lt;level value=&quot;ALL&quot; /&gt;        &lt;appender-ref ref=&quot;TraceAppender&quot; /&gt;    &lt;/root&gt;&lt;/log4net&gt;" />
+    </ConfigurationSettings>
+  </Role>
+  <Role name="SampleWebRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="log4net" value="&lt;log4net&gt;       &lt;appender name=&quot;TraceAppender&quot; type=&quot;log4net.Appender.TraceAppender&quot;&gt;        &lt;layout type=&quot;log4net.Layout.PatternLayout&quot;&gt;            &lt;conversionPattern value=&quot;%date [%thread] %-5level %logger [%property{NDC}] - %message%newline&quot; /&gt;        &lt;/layout&gt;    &lt;/appender&gt;    &lt;root&gt;        &lt;level value=&quot;ALL&quot; /&gt;        &lt;appender-ref ref=&quot;TraceAppender&quot; /&gt;    &lt;/root&gt;&lt;/log4net&gt;" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>
